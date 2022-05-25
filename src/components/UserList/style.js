@@ -1,3 +1,4 @@
+import { makeStyles } from "@material-ui/core";
 import styled from "styled-components";
 
 export const UserList = styled.div`
@@ -35,6 +36,11 @@ export const UserPicture = styled.img`
   border-radius: 45%;
 `;
 
+export const UserPictureFav = styled.img`
+  border-radius: 90%;
+  width: 50
+`;
+
 export const SpinnerWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -54,3 +60,13 @@ export const Filters = styled.div`
     margin-inline-end: 8px;
   }
 `;
+
+export const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
